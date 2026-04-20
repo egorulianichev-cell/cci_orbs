@@ -13,7 +13,7 @@ jobs:
   test-orb:
     executor: docker-test
     steps:
-      - hello/run-orb:
+      - hello/hello: 
           to: CCI
 
 workflows:
