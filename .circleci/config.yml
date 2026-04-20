@@ -1,0 +1,22 @@
+version: 2.1
+
+executors:
+  docker-test:
+    docker:
+      - image: cimg/base:stable
+    resource_class: small
+
+orbs:
+  hello: https://raw.githubusercontent.com/TheTunasOrg/test_orbs/main/test_orb.yml
+
+jobs:
+  test-orb:
+    executor: docker-test
+    steps:
+      - hello/hello:
+          to: CircleCI
+
+workflows:
+  run-orb:
+    jobs:
+      - test-orb
