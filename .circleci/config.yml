@@ -13,8 +13,8 @@ jobs:
   test-orb:
     executor: docker-test
     steps:
-      - hello/hello: 
-          to: CircleCI
+      - hello/hello 
+          # to: CircleCI
 
 workflows:
   run-orb:
