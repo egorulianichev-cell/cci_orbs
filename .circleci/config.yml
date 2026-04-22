@@ -14,7 +14,7 @@ jobs:
     executor: docker-test
     steps:
       - hello/hello:
-          to: "From Subdir Private"
+          to: "From Subdir Private remove allow list"
 
 workflows:
   run-orb:
